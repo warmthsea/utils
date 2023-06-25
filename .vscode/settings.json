@@ -1,0 +1,11 @@
+{
+  "prettier.enable": true,
+  "editor.formatOnSave": false,
+  "files.autoSave": "onFocusChange",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

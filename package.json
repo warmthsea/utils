@@ -1,20 +1,16 @@
 {
-  "name": "pkg-name",
+  "name": "@warmthsea/utils",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.3",
   "packageManager": "pnpm@8.6.0",
   "description": "",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "warmthsea",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/antfu/pkg-name#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/antfu/pkg-name.git"
-  },
-  "bugs": "https://github.com/antfu/pkg-name/issues",
   "keywords": [],
   "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -45,6 +41,9 @@
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "form-data": "^4.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.4",
