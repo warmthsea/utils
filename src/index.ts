@@ -43,7 +43,10 @@ export function utilFormData<T extends Record<string, any>>(data: T): FormData {
 /** delete the key whose key value is empty in the object */
 export function utilObjectFilter<T extends Record<string, any>>(data: T): T {
   const parData = { ...data }
-  for (const item in parData) !parData[item] && delete parData[item]
+  for (const item in parData) {
+    if (!parData[item] && parData[item] !== false && parData[item] !== 0)
+      delete parData[item]
+  }
   return parData
 }
 
