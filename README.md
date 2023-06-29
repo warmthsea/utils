@@ -9,6 +9,7 @@
 -  `utilGetSuffix`
 -  `utilFormData`
 -  `utilObjectFilter`
+-  `utilDownBlobFile`
 
 ## License
 

@@ -1,9 +1,9 @@
 import FormData from 'form-data'
 
 /**
- * 异步等待时间
+ * async await timer
  * @param timer ms
- * @returns
+ * @returns Promise
  */
 export function utilAwaitTime(timer: number): Promise<void> {
   return new Promise((resolve) => {
@@ -14,6 +14,7 @@ export function utilAwaitTime(timer: number): Promise<void> {
   })
 }
 
+/** delay */
 export const utilDelay = (function () {
   let timer: NodeJS.Timeout
   return function (callback: () => void, ms: number | undefined) {
@@ -22,7 +23,7 @@ export const utilDelay = (function () {
   }
 })()
 
-/** 获取文件地址后缀 */
+/** get the filename suffix */
 export function utilGetSuffix(str: string): string {
   if (!str.includes('.'))
     return ''
@@ -30,7 +31,7 @@ export function utilGetSuffix(str: string): string {
   return fileExtension
 }
 
-/** Object 转化 为 FormData */
+/** object to FormData Data */
 export function utilFormData<T extends Record<string, any>>(data: T): FormData {
   const formData = new FormData()
   for (const item in data)
@@ -39,9 +40,21 @@ export function utilFormData<T extends Record<string, any>>(data: T): FormData {
   return formData
 }
 
-/** Object 数据为空的清除 */
+/** delete the key whose key value is empty in the object */
 export function utilObjectFilter<T extends Record<string, any>>(data: T): T {
   const parData = { ...data }
   for (const item in parData) !parData[item] && delete parData[item]
   return parData
+}
+
+/** file Blob download */
+export function utilDownBlobFile(file: Blob, fileName: string) {
+  const link = document.createElement('a')
+  link.href = window.URL.createObjectURL(new Blob([file]))
+  link.style.display = 'none'
+  link.target = '_blank'
+  link.download = fileName
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
 }
