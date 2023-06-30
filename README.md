@@ -3,7 +3,13 @@
 [![NPM version](https://img.shields.io/npm/v/@warmthsea/utils?color=a1b858&label=)](https://www.npmjs.com/package/@warmthsea/utils)
 [![NPM download](https://img.shields.io/npm/dm/@warmthsea/utils?color=50a36f&label=)](https://www.npmjs.com/package/@warmthsea/utils)
 
-## Function
+## 📦 Install
+
+```bash
+npm i @warmthsea/utils
+```
+
+## 🦄 Usage
 
 -  `utilAwaitTime`
 ```typescript
@@ -16,6 +22,7 @@ async function testFun () {
 -  `utilDelay`
 ```typescript
 let num = 1
+
 function continuousClickFun (){
   utilDelay(() => {
     num ++
@@ -36,6 +43,7 @@ const testObject = {
   b: 'test'
   c: undefined
 }
+
 console.log(utilFormData(testObject)) // =>  { a: 1, b: 'test' }
 ```
 
@@ -46,6 +54,7 @@ const testObject = {
   b: false
   c: undefined
 }
+
 console.log(utilObjectFilter(testObject)) // =>  { a: 0, b: false }
 ```
 
