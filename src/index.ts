@@ -61,3 +61,11 @@ export function utilDownBlobFile(file: Blob, fileName: string) {
   link.click()
   document.body.removeChild(link)
 }
+
+/** Array Object Includes Object */
+export function utilObjectArrayIncludes<T extends Record<string, any>>(list: Array<T>, item: T, key?: keyof T): boolean {
+  return list.some(i => key
+    ? JSON.stringify(i[key]) === JSON.stringify(item[key])
+    : JSON.stringify(i) === JSON.stringify(item),
+  )
+}
