@@ -14,7 +14,7 @@ export function utilAwaitTime(timer: number): Promise<void> {
   })
 }
 
-/** delay */
+/** Delay */
 export const utilDelay = (function () {
   let timer: NodeJS.Timeout
   return function (callback: () => void, ms: number | undefined) {
@@ -23,7 +23,7 @@ export const utilDelay = (function () {
   }
 })()
 
-/** get the filename suffix */
+/** Get the filename suffix */
 export function utilGetSuffix(str: string): string {
   if (!str.includes('.'))
     return ''
@@ -31,7 +31,7 @@ export function utilGetSuffix(str: string): string {
   return fileExtension
 }
 
-/** object to FormData Data */
+/** Object to FormData data */
 export function utilFormData<T extends Record<string, any>>(data: T): FormData {
   const formData = new FormData()
   for (const item in data)
@@ -40,7 +40,7 @@ export function utilFormData<T extends Record<string, any>>(data: T): FormData {
   return formData
 }
 
-/** delete the key whose key value is empty in the object */
+/** Delete the key whose key value is empty in the object */
 export function utilObjectFilter<T extends Record<string, any>>(data: T): T {
   const parData = { ...data }
   for (const item in parData) {
@@ -50,7 +50,7 @@ export function utilObjectFilter<T extends Record<string, any>>(data: T): T {
   return parData
 }
 
-/** file Blob download */
+/** File Blob download */
 export function utilDownBlobFile(file: Blob, fileName: string) {
   const link = document.createElement('a')
   link.href = window.URL.createObjectURL(new Blob([file]))
