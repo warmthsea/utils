@@ -1,4 +1,4 @@
-# <i style="font-family: fantasy;">@warmthsea/utils</i>
+# @warmthsea/utils
 
 [![NPM version](https://img.shields.io/npm/v/@warmthsea/utils?color=a1b858&label=)](https://www.npmjs.com/package/@warmthsea/utils)
 [![NPM download](https://img.shields.io/npm/dm/@warmthsea/utils?color=50a36f&label=)](https://www.npmjs.com/package/@warmthsea/utils)
