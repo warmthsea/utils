@@ -1,12 +1,13 @@
-# @warmthsea/utils
+# <i style="font-family: fantasy;">@warmthsea/utils</i>
 
 [![NPM version](https://img.shields.io/npm/v/@warmthsea/utils?color=a1b858&label=)](https://www.npmjs.com/package/@warmthsea/utils)
 [![NPM download](https://img.shields.io/npm/dm/@warmthsea/utils?color=50a36f&label=)](https://www.npmjs.com/package/@warmthsea/utils)
+<img alt="Github License" src="https://img.shields.io/badge/License-MIT-green.svg" />
 
 ## 📦 Install
 
 ```bash
-npm i @warmthsea/utils
+pnpm i @warmthsea/utils
 ```
 
 ## 🦄 Usage
@@ -65,6 +66,19 @@ console.log(utilObjectFilter(testObject)) // =>  { a: 0, b: false }
 utilDownBlobFile(fileBlob,'text.xlsx')
 ```
 
+-  `utilObjectArrayIncludes`
+```typescript
+const list = [{
+  num: 1
+},{
+  num: 2
+}]
+const item = {
+  num: 1
+}
+
+utilObjectArrayIncludes(list, item) // =>  true
+```
 ## License
 
 [MIT](./LICENSE) License © 2023 [Warmthsea](https://github.com/warmthsea)
