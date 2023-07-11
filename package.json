@@ -1,11 +1,12 @@
 {
   "name": "@warmthsea/utils",
   "type": "module",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "packageManager": "pnpm@8.6.0",
   "description": "",
   "author": "warmthsea",
   "license": "MIT",
+  "homepage": "https://unocss.dev",
   "repository": {
     "type": "git",
     "url": "https://github.com/warmthsea/utils.git"
